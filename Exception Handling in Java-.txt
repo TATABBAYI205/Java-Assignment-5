@@ -1,0 +1,20 @@
+Exception Handling in Java:-
+==========================
+-> Exception Handling in Java is one of the effective means to handle the runtime errors so that the regular flow of the application can be preserved. Java Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+-> In Java, exception handling is accomplished through the use of try-catch blocks. The code that might throw an exception is enclosed within the try block, and the corresponding exception handlers are defined in the catch blocks. Here's a general syntax of a try-catch.
+
+syntax:-
+
+try {
+    // Code that might throw an exception
+    // ...
+} catch (ExceptionType1 ex1) {
+    // Exception handler for ExceptionType1
+    // ...
+} catch (ExceptionType2 ex2) {
+    // Exception handler for ExceptionType2
+    // ...
+} finally {
+    // Optional: Code that will always execute, regardless of whether an exception occurred or not
+    // ...
+} 

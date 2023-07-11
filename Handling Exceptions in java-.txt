@@ -1,0 +1,32 @@
+Handling Exceptions in java:-
+===========================
+-> try-Catch Block: The try-catch block allows you to catch and handle exceptions within your code. 
+
+syntax:-
+
+try {
+    // Code that might throw an exception
+} catch (ExceptionType1 ex1) {
+    // Exception handler for ExceptionType1
+} catch (ExceptionType2 ex2) {
+    // Exception handler for ExceptionType2
+} finally {
+    // Optional: Code that will always execute, regardless of whether an exception occurred or not
+}
+
+Inside the try block, you place the code that might throw an exception. If an exception occurs, the catch blocks are evaluated in order. The catch block that matches the type of the thrown exception will be executed, and you can provide the necessary handling logic there. Multiple catch blocks can be used to handle different types of exceptions.
+
+The finally block is optional and is used to specify code that will execute regardless of whether an exception occurred or not. It is commonly used to perform cleanup operations or release resources.
+
+-> Throws Clause: If a method is not capable of handling an exception, you can use the throws clause in the method declaration to specify that the method may throw a particular type of exception. This way, the responsibility of handling the exception is passed to the calling method. 
+
+syntax:-
+
+public void methodName() throws ExceptionType1, ExceptionType2 {
+    // Code that might throw an exception
+}
+The caller of the method containing the throws clause is responsible for either catching the exception using a try-catch block or propagating the exception further up the call stack using its own throws clause.
+
+-> Finally Block: The finally block, as mentioned earlier, is optional and used to specify code that will always execute, regardless of whether an exception occurred or not. It is typically used to ensure that resources are properly released, even in the presence of exceptions.
+
+-> Handling and Propagation: When an exception occurs and is caught, you can handle it by providing appropriate error messages, logging, or taking corrective actions. If the exception cannot be handled at the current level, you can rethrow the exception using the throw keyword to propagate it to the calling code or catch it at a higher level.

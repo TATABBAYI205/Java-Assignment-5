@@ -1,0 +1,7 @@
+Thread in java:-
+===============
+-> In Java, a thread refers to a lightweight unit of execution within a program. It is a fundamental component of multithreading, which enables concurrent execution of multiple threads within a single program.
+
+-> A thread represents an independent flow of control that can run concurrently with other threads, allowing for parallel or concurrent execution of tasks. Each thread has its own program counter, stack, and local variables, while sharing the same memory space and resources of the process it belongs to.
+
+-> Threads in Java are created and managed using the java.lang.Thread class or by implementing the java.lang.Runnable interface. The Thread class provides methods to create, start, and control threads, while the Runnable interface represents a task that can be executed by a thread.

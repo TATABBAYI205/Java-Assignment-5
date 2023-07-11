@@ -1,0 +1,30 @@
+Creation of Thread:-
+===================
+In java there are two ways to create threading,
+ 
+-> Extending the Thread class: This approach involves creating a subclass of the Thread class and overriding its run() method to define the thread's behavior. The run() method contains the code that will be executed when the thread is started. Here's an example:
+
+class MyThread extends Thread {
+    public void run() {
+        // Thread's behavior goes here
+    }
+}
+
+// Creating and starting the thread
+MyThread thread = new MyThread();
+thread.start();
+By extending the Thread class, you can directly invoke methods like start(), sleep(), and interrupt() on the thread object itself. However, since Java doesn't support multiple inheritance, extending the Thread class restricts the subclass from inheriting any other classes.
+
+
+-> Implementing the Runnable interface: This approach involves creating a class that implements the Runnable interface and implementing its run() method. The run() method contains the thread's behavior. Here's an example:
+
+class MyRunnable implements Runnable {
+    public void run() {
+        // Thread's behavior goes here
+    }
+}
+
+// Creating and starting the thread
+Thread thread = new Thread(new MyRunnable());
+thread.start();
+By implementing the Runnable interface, you can pass the runnable object to a Thread constructor and create a Thread object. This approach is more flexible because it allows the class to inherit other classes or implement other interfaces.

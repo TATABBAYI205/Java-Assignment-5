@@ -1,0 +1,35 @@
+
+
+class MyCustomException extends Exception
+{
+    public MyCustomException(String message) 
+    {
+        super(message);
+    }
+}
+
+public class CustomExceptionExample 
+{
+   public static void main(String[] args) 
+    {
+        try 
+        {
+            processInput(10);
+        }  
+        catch (MyCustomException e)  
+        {
+            System.out.println("Custom exception caught: " + e.getMessage());
+        }
+    }
+    public static void processInput(int value) throws MyCustomException 
+    {
+        if (value < 0) 
+        {
+            throw new MyCustomException("Input cannot be negative");
+        } 
+        else 
+        {
+            System.out.println("Input processed successfully");
+        }
+    }
+}

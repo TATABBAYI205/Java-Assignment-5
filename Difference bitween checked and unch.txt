@@ -1,0 +1,24 @@
+Difference bitween checked and unchecked exceptions in java:-
+============================================================
+_______________________________________________________________________________________________________________________________________________
+               |            Checked Exceptions	                                    |     Unchecked Exceptions                                 |
+_______________|___________________________________________________________________ |__________________________________________________________|                                                                       
+Syntax	       |  Must be declared explicitly in the method signature or handled    |   Not required to be declared or caught explicitly.      |
+               |  using try-catch blocks.                                           |                                                          | 
+_______________|___________________________________________________________________ |__________________________________________________________|	       
+Handling       |  Must be caught or declared in the method using throws keyword.    |   Optional to catch or declare.                          |
+_______________|___________________________________________________________________ |__________________________________________________________|           
+Examples       |  IOException, SQLException, ClassNotFoundException	            |   NullPointerException, ArrayIndexOutOfBoundsException   |
+_______________|___________________________________________________________________ |__________________________________________________________|
+Role	       |  Represents anticipated exceptional conditions that can be         |   Represents programming errors or exceptional conditions|     
+               |  recovered from.	                                            |   that are unlikely to be recovered from.                |
+_______________|___________________________________________________________________ |__________________________________________________________|           
+Checked at     |  Yes                                                               |   No                                                     |
+Compile Time?  |		                                                    |                                                          |
+_______________|___________________________________________________________________ |__________________________________________________________|             
+Inheritance    |  Checked exceptions are generally subclasses of java.lang.Exception|   Unchecked exceptions are subclasses of                 | 
+               |  (except RuntimeException and its subclasses).	                    |   java.lang.RuntimeException.                            |
+_______________|___________________________________________________________________ |__________________________________________________________|
+Checked by     |  The compiler enforces handling of checked exceptions.             |   The compiler does not enforce handling of unchecked    |
+Compiler?      | 	                                                            |   exceptions.                                            |
+_______________|___________________________________________________________________ |__________________________________________________________|           
